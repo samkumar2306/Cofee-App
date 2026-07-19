@@ -8,6 +8,7 @@ from app.extensions import db, migrate, jwt
 from app.middleware.error_handler import register_error_handlers
 from app.api.student import student_bp
 from app.api.teacher import teacher_bp
+from app.api.course import course_bp
 
 import app.models
 
@@ -33,5 +34,6 @@ def create_app():
     app.register_blueprint(auth_bp, url_prefix="/api/auth")
     app.register_blueprint(student_bp, url_prefix="/api/students")
     app.register_blueprint(teacher_bp)
+    app.register_blueprint(course_bp)
 
     return app
