@@ -109,10 +109,10 @@ class StudentService:
         except Exception as e:
          db.session.rollback()
 
-        return {
+         return {
            "status": "error",
            "message": str(e)
-        }, 500           
+         }, 500           
 
         return {
             "status": "success",
